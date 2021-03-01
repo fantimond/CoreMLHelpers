@@ -86,7 +86,7 @@ public func rotate90PixelBuffer(from srcPixelBuffer: CVPixelBuffer,
 public func rotate90PixelBuffer(_ srcPixelBuffer: CVPixelBuffer, factor: UInt8) -> CVPixelBuffer? {
   var dstWidth = CVPixelBufferGetWidth(srcPixelBuffer)
   var dstHeight = CVPixelBufferGetHeight(srcPixelBuffer)
-  if factor % 2 == 1 {
+  if factor % 2 == 1 {  // 0, 1, 2, 3 is equal to 0, 90, 180, 270 degrees rotation
     swap(&dstWidth, &dstHeight)
   }
 

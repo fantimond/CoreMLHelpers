@@ -39,7 +39,7 @@ extension CGImage {
   public func pixelBuffer(width: Int, height: Int,
                           orientation: CGImagePropertyOrientation) -> CVPixelBuffer? {
     return pixelBuffer(width: width, height: height,
-                       pixelFormatType: kCVPixelFormatType_32ARGB,
+                       pixelFormatType: kCVPixelFormatType_32ARGB,  // ?
                        colorSpace: CGColorSpaceCreateDeviceRGB(),
                        alphaInfo: .noneSkipFirst,
                        orientation: orientation)
