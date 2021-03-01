@@ -65,7 +65,7 @@ extension MLMultiArray {
     let newShape = shape.indices.map { shape[order[$0]] }
     let newArray = try MLMultiArray(shape: newShape, dataType: self.dataType)
 
-    let srcPtr = UnsafeMutablePointer<Double>(OpaquePointer(dataPointer))
+    let srcPtr = UnsafeMutablePointer<Double>(OpaquePointer(dataPointer))  // this init func is in beta status
     let dstPtr = UnsafeMutablePointer<Double>(OpaquePointer(newArray.dataPointer))
 
     let srcShape = shape.map { $0.intValue }
